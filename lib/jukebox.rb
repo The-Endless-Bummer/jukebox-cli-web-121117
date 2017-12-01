@@ -45,10 +45,10 @@ end
 
 def run(songs)
   help
-  command = nil
+  puts "Please enter a command:"
+  command = gets.chomp
   if command != 'exit'
-    puts "Please enter a command:"
-    command = gets.chomp
+
   elsif command == 'list'
     list(songs)
   elsif command == 'help'
