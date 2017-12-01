@@ -46,9 +46,9 @@ end
 def run(songs)
   help
   command = nil
-  if command == 'exit'
-    exit_jukebox
-    break
+  if command != 'exit'
+    puts "Please enter a command:"
+    command = gets.chomp
   elsif command == 'list'
     list(songs)
   elsif command == 'help'
@@ -56,7 +56,7 @@ def run(songs)
   elsif command == 'play'
     play(songs)
   else
-    puts "Please enter a command:"
-    command = gets.chomp
+    exit_jukebox
+    break
   end
 end
