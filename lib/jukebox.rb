@@ -48,6 +48,7 @@ def run(songs)
   command = nil
   if command == 'exit'
     exit_jukebox
+    break
   elsif command == 'list'
     list(songs)
   elsif command == 'help'
